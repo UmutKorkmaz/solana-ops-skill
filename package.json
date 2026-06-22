@@ -1,0 +1,15 @@
+{
+  "name": "solana-ops-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A production reliability skill for Solana builders that helps agents diagnose RPC issues, transaction landing failures, priority fee/CU problems, websocket/indexer drift, and incident readiness.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/validate-skill.mjs",
+    "lint:shell": "bash -n install.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
