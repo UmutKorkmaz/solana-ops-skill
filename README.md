@@ -1,5 +1,8 @@
 # Solana Ops Skill
 
+[![Validate Skill](https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A production reliability skill for Solana builders that helps agents diagnose RPC issues, transaction landing failures, priority fee/CU problems, websocket/indexer drift, and incident readiness.
 
 ## What This Solves
@@ -15,6 +18,25 @@ Use it for:
 - Incident response, postmortems, production readiness, and Solana-specific SLOs
 
 This is an addon-style skill. It complements core Solana development skills by focusing on production operations rather than program authoring.
+
+## Why This Is Different
+
+Most Solana skills help builders write, test, or reason about programs and transactions. This skill focuses on the production layer after a dapp is live:
+
+- Is the RPC provider unhealthy, stale, overloaded, or rate-limited?
+- Did the transaction fail because of blockhash expiry, fee/CU policy, program logs, wallet delay, or confirmation logic?
+- Did the websocket/indexer miss events, and how should the team backfill safely?
+- What should a founder or on-call engineer do in the first 15 minutes of an incident?
+- What telemetry and SLOs should exist before launch?
+
+The skill is intentionally evidence-first. It routes agents to collect signatures, endpoint labels, slots, block heights, simulation logs, fee/CU data, websocket cursors, indexer lag, and deployment timelines before recommending changes.
+
+## Bounty Submission
+
+- Standalone repo: https://github.com/UmutKorkmaz/solana-ops-skill
+- Skill bounty PR: https://github.com/solanabr/skill-bounty/pull/5
+- Submission packet: [SUBMISSION.md](SUBMISSION.md)
+- CI validation: https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml
 
 ## Installation
 
@@ -88,10 +110,11 @@ Review this dapp for Solana production readiness before launch.
 ## Validation
 
 ```bash
-node tests/validate-skill.mjs
+npm test
+npm run lint:shell
 ```
 
-The validation checks that the entrypoint exists, local markdown links resolve, referenced files exist, and skill files stay within a reasonable token-loading size.
+The validation checks that the entrypoint exists, local markdown links resolve, referenced files exist, and skill files stay within a reasonable progressive-loading size. Shell linting checks the installer syntax.
 
 ## Design Principles
 
