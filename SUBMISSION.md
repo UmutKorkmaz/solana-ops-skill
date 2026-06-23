@@ -16,6 +16,10 @@ https://github.com/UmutKorkmaz/solana-ops-skill
 
 https://github.com/solanabr/skill-bounty/pull/5
 
+## GitHub Pages
+
+https://umutkorkmaz.github.io/solana-ops-skill/
+
 ## Did You Contribute Towards Existing Repos Or Is It A New Idea?
 
 New idea. Solana Ops Skill focuses on production reliability and incident response for live Solana applications: RPC health, transaction landing, blockhash expiry, priority fee/CU tuning, confirmation, websocket/indexer drift, observability SLOs, provider failover, and cost/safety guardrails. It is submitted as a standalone MIT-licensed repo and as a PR to `solanabr/skill-bounty`.

@@ -25,5 +25,8 @@ jobs:
       - name: Validate markdown skill structure
         run: npm test
 
+      - name: Validate GitHub Pages site
+        run: npm run test:pages
+
       - name: Validate installer syntax
         run: npm run lint:shell

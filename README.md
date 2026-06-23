@@ -34,6 +34,7 @@ The skill is intentionally evidence-first. It routes agents to collect signature
 ## Bounty Submission
 
 - Standalone repo: https://github.com/UmutKorkmaz/solana-ops-skill
+- GitHub Pages: https://umutkorkmaz.github.io/solana-ops-skill/
 - Skill bounty PR: https://github.com/solanabr/skill-bounty/pull/5
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
 - Form answers: [FORM_ANSWERS.md](FORM_ANSWERS.md)

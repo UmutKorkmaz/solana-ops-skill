@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Solana Ops Skill is a production reliability and incident-response skill for Solana builders using agentic workflows."
+    />
+    <meta name="theme-color" content="#08110f" />
+    <title>Solana Ops Skill</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Solana Ops Skill home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Solana Ops Skill</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#workflow">Workflow</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#proof">Proof</a>
+        <a class="nav-cta" href="https://github.com/UmutKorkmaz/solana-ops-skill">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <h1>Production reliability for live Solana agents.</h1>
+          <p class="hero-lede">
+            Solana Ops Skill helps agents diagnose RPC issues, transaction landing failures,
+            blockhash expiry, priority fee/CU tuning, confirmation drift, websocket/indexer
+            gaps, and incident readiness with evidence before advice.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="https://github.com/UmutKorkmaz/solana-ops-skill">
+              View repo
+            </a>
+            <a class="button secondary" href="https://github.com/solanabr/skill-bounty/pull/5">
+              Bounty PR
+            </a>
+          </div>
+          <dl class="status-grid" aria-label="Project status">
+            <div>
+              <dt>License</dt>
+              <dd>MIT</dd>
+            </div>
+            <div>
+              <dt>Validation</dt>
+              <dd>23 markdown files</dd>
+            </div>
+            <div>
+              <dt>PR State</dt>
+              <dd>Open + mergeable</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="./assets/solana-ops-command-center.png"
+            alt="Abstract command center visual showing Solana RPC nodes, transaction paths, alerts, and reliability dashboards."
+          />
+        </figure>
+      </section>
+
+      <section class="problem section-shell" aria-labelledby="problem-title">
+        <div>
+          <h2 id="problem-title">The recurring failure mode is not one thing.</h2>
+          <p>
+            When a live Solana app fails, the first explanation is often wrong. A payment can
+            show a signature while the backend marks it failed. A simulated transaction may
+            never land. A websocket listener can miss updates while the RPC endpoint looks
+            healthy. This skill gives agents a disciplined way to separate those causes.
+          </p>
+        </div>
+        <div class="problem-list">
+          <span>Blockhash expired before first send</span>
+          <span>RPC endpoint stale or rate-limited</span>
+          <span>Priority fee too low for the flow</span>
+          <span>Confirmation logic watches the wrong state</span>
+          <span>Indexer drift after websocket reconnect</span>
+        </div>
+      </section>
+
+      <section id="workflow" class="workflow section-shell" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <h2 id="workflow-title">Evidence-first agent workflow.</h2>
+          <p>
+            The entry point routes agents to the smallest relevant context, then forces a
+            concrete diagnosis shape: finding, evidence, fix, verification, rollback, and open
+            questions.
+          </p>
+        </div>
+        <div class="workflow-grid">
+          <figure class="workflow-visual">
+            <img
+              src="./assets/solana-ops-diagnostic-flow.png"
+              alt="Abstract diagnostic flow graphic for a Solana production incident."
+            />
+          </figure>
+          <ol class="steps">
+            <li>
+              <strong>Classify the failure.</strong>
+              Route from <code>skill/SKILL.md</code> into RPC, transaction, fee/CU,
+              confirmation, websocket, or incident references.
+            </li>
+            <li>
+              <strong>Collect hard signals.</strong>
+              Signatures, slots, block heights, endpoint labels, simulation logs, fee/CU data,
+              websocket cursors, and deployment timelines.
+            </li>
+            <li>
+              <strong>Recommend the smallest fix.</strong>
+              Include a verification check and rollback path instead of guessing from a single
+              explorer link.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="coverage" class="coverage section-shell" aria-labelledby="coverage-title">
+        <div class="section-heading">
+          <h2 id="coverage-title">Focused modules, loaded only when needed.</h2>
+          <p>
+            The skill avoids one giant context dump. Agents load focused references according to
+            the incident they are handling.
+          </p>
+        </div>
+        <div class="module-grid">
+          <article>
+            <h3>RPC Health</h3>
+            <p>Slot lag, stale reads, rate limits, send degradation, provider failover.</p>
+          </article>
+          <article>
+            <h3>Transaction Landing</h3>
+            <p>Blockhash expiry, dropped signatures, simulation mismatch, confirmation loops.</p>
+          </article>
+          <article>
+            <h3>Priority Fees + CU</h3>
+            <p>Compute limits, fee ceilings, congestion, account contention, cost guardrails.</p>
+          </article>
+          <article>
+            <h3>Websocket + Indexers</h3>
+            <p>Disconnect recovery, missed notifications, cursor replay, reconciliation drift.</p>
+          </article>
+          <article>
+            <h3>Incident Runbooks</h3>
+            <p>Severity, mitigation, communication, postmortems, and corrective actions.</p>
+          </article>
+          <article>
+            <h3>Launch Readiness</h3>
+            <p>Production SLOs, validation checks, observability signals, and safety limits.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="proof" class="proof section-shell" aria-labelledby="proof-title">
+        <div class="section-heading">
+          <h2 id="proof-title">Built for the bounty rubric.</h2>
+          <p>
+            The repository includes the skill, docs, examples, tests, CI, demo, and a direct PR
+            to the public skill bounty repository.
+          </p>
+        </div>
+        <div class="proof-layout">
+          <div class="terminal-card" aria-label="Validation output">
+            <div class="terminal-top">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>$ npm test
+Validation passed: 23 markdown files checked.
+
+$ npm run lint:shell
+bash -n install.sh
+
+$ gh pr view 5
+state: OPEN
+mergeable: MERGEABLE</code></pre>
+          </div>
+          <div class="proof-links">
+            <a href="https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/RUBRIC_CHECKLIST.md">
+              Rubric checklist
+            </a>
+            <a href="https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/DEMO.md">
+              End-to-end demo
+            </a>
+            <a href="https://github.com/UmutKorkmaz/solana-ops-skill/actions/runs/28004272104">
+              Passing CI run
+            </a>
+            <a href="https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/skill/SKILL.md">
+              SKILL.md entrypoint
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell" aria-label="Final call to action">
+        <h2>Ready to merge or submodule into Solana AI Kit.</h2>
+        <p>
+          MIT licensed, no hidden executables, no private-key handling, no postinstall behavior,
+          and a clean progressive skill structure.
+        </p>
+        <a class="button primary" href="https://github.com/UmutKorkmaz/solana-ops-skill">
+          Open GitHub repo
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Solana Ops Skill</span>
+      <a href="https://github.com/UmutKorkmaz/solana-ops-skill">GitHub</a>
+      <a href="https://github.com/solanabr/skill-bounty/pull/5">Bounty PR</a>
+    </footer>
+  </body>
+</html>

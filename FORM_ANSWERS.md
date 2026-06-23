@@ -21,6 +21,7 @@ New idea. Solana Ops Skill focuses on production reliability and incident respon
 It is submitted as a standalone MIT-licensed repo and as a PR to `solanabr/skill-bounty`:
 
 - Standalone repo: https://github.com/UmutKorkmaz/solana-ops-skill
+- GitHub Pages: https://umutkorkmaz.github.io/solana-ops-skill/
 - Bounty PR: https://github.com/solanabr/skill-bounty/pull/5
 
 ## What Is Your Closest "Competing" Skill?
