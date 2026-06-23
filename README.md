@@ -38,6 +38,8 @@ The skill is intentionally evidence-first. It routes agents to collect signature
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
 - Form answers: [FORM_ANSWERS.md](FORM_ANSWERS.md)
 - Launch post draft: [LAUNCH_POST.md](LAUNCH_POST.md)
+- Rubric checklist: [RUBRIC_CHECKLIST.md](RUBRIC_CHECKLIST.md)
+- End-to-end demo: [DEMO.md](DEMO.md)
 - CI validation: https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml
 
 ## Installation

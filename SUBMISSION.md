@@ -65,6 +65,14 @@ CI workflow:
 
 https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml
 
+Rubric checklist:
+
+https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/RUBRIC_CHECKLIST.md
+
+End-to-end demo:
+
+https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/DEMO.md
+
 ## Anything Else?
 
 The skill is designed to be directly mergeable or submodule-ready:

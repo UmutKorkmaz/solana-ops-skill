@@ -45,6 +45,8 @@ Proof links:
 - Repo: https://github.com/UmutKorkmaz/solana-ops-skill
 - Skill bounty PR: https://github.com/solanabr/skill-bounty/pull/5
 - Submission packet: https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/SUBMISSION.md
+- Rubric checklist: https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/RUBRIC_CHECKLIST.md
+- End-to-end demo: https://github.com/UmutKorkmaz/solana-ops-skill/blob/main/DEMO.md
 - CI workflow: https://github.com/UmutKorkmaz/solana-ops-skill/actions/workflows/validate.yml
 
 Proof inside the repo:
